@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="utf-8" />
+  <title>Discover Hong Kong Outdoors</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://unpkg.com; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com;">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff"> -->
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Fixed Leaflet-AJAX (Browser safe) -->
+  <script src="https://cdn.jsdelivr.net/npm/leaflet-ajax@2.1.0/dist/leaflet.ajax.min.js"></script>
+
+  <!-- Plugins -->
+  <link rel="stylesheet" href="./lib_leaflet/Coordinates/Leaflet.Coordinates-0.1.5.css" />
+  <script src="./lib_leaflet/Coordinates/Leaflet.Coordinates-0.1.5.min.js"></script>
+  <link rel="stylesheet" href="./lib_leaflet/ZoomBar/L.Control.ZoomBar.css" />
+  <script src="./lib_leaflet/ZoomBar/L.Control.ZoomBar.js"></script>
+  <link rel="stylesheet" href="./lib_leaflet/ZoomLabel/L.Control.ZoomLabel.css" />
+  <script src="./lib_leaflet/ZoomLabel/L.Control.ZoomLabel.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="files-css/style.css" />
+</head>
+
+
+
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Header -->
+
+  <header class="main-header">
+    <div class="header-container">
+      <h1 class="site-title">🌿 Discover HK Outdoors</h1>
+      <div id="hk-weather" class="weather-display"></div>
+    </div>
+  </header>
+
+
+  <!-- Weather Script -->
+  <script>
+    async function getHKWeather() {
+      try {
+        const apiKey = 'bd41855153d67ebde79e3031d40a17fb';
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=22.3193&lon=114.1694&units=metric&appid=${apiKey}`);
+        if (!response.ok) throw new Error('天氣資料獲取失敗');
+        const data = await response.json();
+        const temp = Math.round(data.main.temp);
+        const hum = data.main.humidity;
+        document.getElementById('hk-weather').innerHTML = `
+          <i class="fas fa-temperature-half"></i> 🌡️${temp}°C
+          <i class="fas fa-droplet ml-2"></i> 💧${hum}% |
+          <a href="https://openweathermap.org/" class="underline ml-1" target="_blank" rel="noopener">OpenWeatherMap</a>
+        `;
+      } catch (error) {
+        document.getElementById('hk-weather').textContent = `⚠️ ${error.message}`;
+      }
+    }
+    getHKWeather();
+  </script>
+
+  <!-- 📍 About Section -->
+  <section id="about" class="main-container about-section">
+    <h2 class="section-title">🌿 Explore Hong Kong's Hidden Gems</h2>
+    <p class="section-description">
+      Discover <strong>nature trails</strong>, <strong>cultural landmarks</strong>, and <strong>leisure spots</strong> across Hong Kong — all in one interactive map. Whether you're a day tripper, a photography lover, or a family on a weekend outing, we've got something curated for you!
+    </p>
+    <ul class="about-features">
+      <li>🗺️ Interactive trail + district explorer</li>
+      <li>📷 Visual recommendations powered by real photos</li>
+    </ul>
+  </section>
+
+
+  <!-- Map Container -->
+  <div id="map" class="relative rounded shadow mb-6">
+  <div id="attraction-info-box" class="info-card"></div>
+  
+    <div id="map-legend" class="map-legend leaflet-control">
+      <h4>🧭 Trail Difficulty</h4>
+      <div><span class="legend-color" style="background:#1E90FF;"></span> Easy</div>
+      <div><span class="legend-color" style="background:#DA70D6;"></span> Moderate</div>
+      <div><span class="legend-color" style="background:#DC143C;"></span> Hard</div>
+    </div>
+  </div> 
+  
+
+  
+
+  <!-- district-info-box -->
+  <div id="district-info-box">
+  📍 Click a district to view its info here.
+  </div>
+
+  <!-- geopark routes info box -->
+  <div id="trail-info-box" class="info-box">
+    <p>🧭 Click a trail to view its detailed information here.</p>
+    <div class="difficulty-filter">
+      <button onclick="filterByDifficulty('All')">All</button>
+      <button onclick="filterByDifficulty('Easy')">Easy</button>
+      <button onclick="filterByDifficulty('Moderate')">Moderate</button>
+      <button onclick="filterByDifficulty('Hard')">Hard</button>
+    </div>
+  </div>
+  
+  
+
+  <!-- Recommendation Section -->
+  <div class="recommendation-section">
+    <!-- Nature -->
+    <h2>Nature</h2>
+    <div class="carousel">
+      <div class="card">
+        <img src="/project_lab/images/card_img/Sai_Kung_Geopark.jpg" alt="Geopark Trail">
+        <div class="card-content">
+          <h3>Sai Kung Geopark</h3>
+          <p>World Geopark with natural wonders such as volcanic rock columns and sea caves.</p>
+          <a href="https://www.geopark.gov.hk" target="_blank">Learn more</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="/project_lab/images/card_img/The_Peak.jpg" alt="The Peak">
+        <div class="card-content">
+          <h3>The Peak</h3>
+          <p>Panoramic views of Hong Kong, surrounded by natural walking trails and forested slopes.</p>
+          <a href="https://www.thepeak.com.hk/en" target="_blank">Learn more</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="/project_lab/images/card_img/Yuen_Tsuen_Ancient_Trail.jpg" alt="Yuen Tsuen Trail">
+        <div class="card-content">
+          <h3>Yuen Tsuen Ancient Trail</h3>
+          <p>Historic countryside trail linking Tsuen Wan and Yuen Long, with forested paths and village scenery.</p>
+          <a href="https://www.hiking.gov.hk/trail/info/id/35" target="_blank">Learn more</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Culture -->
+    <h2>Culture</h2>
+    <div class="carousel">
+      <div class="card">
+        <img src="/project_lab/images/card_img/Yim_Tin_Tsai.jpg" alt="Yim Tin Tsai">
+        <div class="card-content">
+          <h3>Yim Tin Tsai</h3>
+          <p>A revitalized Hakka island village with salt pans and lush greenery.</p>
+          <a href="https://www.yimtintsaiartsfestival.hk" target="_blank">Learn more</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="/project_lab/images/card_img/Clock_Tower.jpg" alt="Clock Tower">
+        <div class="card-content">
+          <h3>Clock Tower</h3>
+          <p>A declared monument from 1915, representing the former Kowloon–Canton Railway Terminus.</p>
+          <a href="http://www.discoverhongkong.com/eng/see-do/culture-heritage/historical-sites/colonial/clock-tower.jsp" target="_blank">Learn more</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="/project_lab/images/card_img/St_Johns_Cathedral.jpg" alt="St. John's Cathedral">
+        <div class="card-content">
+          <h3>St. John's Cathedral</h3>
+          <p>The oldest Anglican church in the Far East, a living symbol of colonial architecture.</p>
+          <a href="https://www.stjohnscathedral.org.hk/" target="_blank">Learn more</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Leisure -->
+    <h2>Leisure</h2>
+    <div class="carousel">
+      <div class="card">
+        <img src="/project_lab/images/card_img/Avenue_of_Stars.jpg" alt="Avenue of Stars">
+        <div class="card-content">
+          <h3>Avenue of Stars</h3>
+          <p>A harborfront tribute to Hong Kong cinema with statues and handprints, ideal for leisure walks.</p>
+          <a href="https://www.avenueofstars.com.hk/en" target="_blank">Learn more</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="/project_lab/images/card_img/Central_Harbourfront.jpg" alt="Central Harbourfront">
+        <div class="card-content">
+          <h3>Central Harbourfront</h3>
+          <p>A multipurpose open space along the harbor for leisure, markets, festivals, and sunsets.</p>
+          <a href="https://www.harbourfront.org.hk/" target="_blank">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Map Logic -->
+  <script src="./files-js/map.js"></script>
+</body>
+</html>
