@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>L.LayerGroup.HongKong Example</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <script src="../js/leaflet-hongkong-provider.js"></script>
+    <style>
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+        
+        body {
+            margin: 0px;
+        }
+        
+        .button-container {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="map"></div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            var basemap_topography_tc = L.layerGroup.hongKong("topography.tc");
+            var basemap_topography_en = L.layerGroup.hongKong("topography.en");
+            var basemap_imagery_en = L.layerGroup.hongKong("imagery.tc");
+            var basemap_imagery_tc = L.layerGroup.hongKong("imagery.en");
+
+            var mymap = L.map('map').setView([22.245251, 114.188409], 13);
+            
+            basemap_topography_tc.addTo(mymap);
+
+            var tiles = {
+                "Topography Traditionl Chinese": basemap_topography_tc,
+                "Topography English": basemap_topography_en,
+                "Imagery  Traditional Chinese": basemap_imagery_en,
+                "Imagery English": basemap_imagery_tc
+            }
+
+            L.control.layers(tiles).addTo(mymap);
+
+            layer.addTo(mymap);
+        });
+    </script>
+</body>
+
+</html>

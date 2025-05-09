@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>L.TileLayer.HongKong Example</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <script src="../js/leaflet-hongkong-provider.js"></script>
+    <style>
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+        
+        body {
+            margin: 0px;
+        }
+        
+        .button-container {
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="map"></div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            var basemap_topography_layer = L.tileLayer.hongKong("basemap.topography");
+            var basemap_imagery_layer = L.tileLayer.hongKong("basemap.imagery");
+            var label_tc_layer = L.tileLayer.hongKong("label.tc");
+            var label_sc_layer = L.tileLayer.hongKong("label.sc");
+            var label_en_layer = L.tileLayer.hongKong("label.en");
+
+            var mymap = L.map('map').setView([22.245251, 114.188409], 13);
+            
+            basemap_topography_layer.addTo(mymap);
+
+            var tiles = {
+                "Basemap Topography": basemap_topography_layer,
+                "Basemap Imagery": basemap_imagery_layer,
+                "Label Traditional Chinese": label_tc_layer,
+                "Label Simplified Chinese": label_sc_layer, 
+                "Label English": label_en_layer
+            }
+
+            L.control.layers(tiles).addTo(mymap);
+
+            layer.addTo(mymap);
+        });
+    </script>
+</body>
+
+</html>

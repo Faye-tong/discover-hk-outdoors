@@ -1,0 +1,391 @@
+body {
+	margin: 0px;
+	padding: 0.5em;
+	background-color: #CCFFCC;
+}
+#map {
+	width: 100%;
+	height: calc(100vh - 180px);
+	border: 1px solid #AAA;
+	z-index: 1000;
+	margin: 0 auto;
+}
+
+/* Header wrapper */
+.main-header {
+	background-color: #2e7d32b1; /* 郊野绿 */
+	color: white;
+	position: sticky;
+	top: 0;
+	z-index: 50;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+/* Inner flex container */
+.header-container {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0.75rem 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+  
+/* Site title */
+.site-title {
+	font-size: 1.25rem;
+	font-weight: 700;
+	font-family: 'Quicksand', sans-serif;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+  
+/* Weather display area */
+.weather-display {
+	font-size: 0.875rem;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+.weather-display a {
+	color: #cfe8ff;
+	text-decoration: underline;
+}
+.weather-display a:hover {
+	color: #ffffff;
+}
+  
+
+/* section */
+.about-section {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+  
+.section-title {
+	font-size: 1.75rem;
+	font-weight: 700;
+	color: #2e7d32;
+	margin-bottom: 0.5rem;
+	font-family: 'Quicksand', sans-serif;
+}
+  
+.section-description {
+	font-size: 1rem;
+	color: #4b5563;
+	max-width: 720px;
+	margin: 0 auto 1rem;
+	line-height: 1.6;
+}
+  
+.about-features {
+	display: inline-block;
+	text-align: left;
+	margin: 0 auto;
+	padding-left: 1.5rem;
+	font-size: 0.95rem;
+	color: #374151;
+	line-height: 1.6;
+}
+  
+
+
+/* 右侧筛选器内容 */
+#sidebar {
+	width: 400px;
+	padding: 12px;
+	background: #802424;
+	overflow-y: auto;
+	border-left: 1px solid #ccc;
+}
+#filter-panel label { display: block; margin: 6px 0; }
+table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 14px; }
+th, td { border: 1px solid #ddd; padding: 6px; text-align: center; }
+th { background-color: #f0f0f0; }
+
+
+
+
+/* 右下角属性表内容 */
+#info_panel {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	background: rgba(255, 255, 255, 0.85);
+	padding: 12px 15px;
+	max-height: 220px;
+	width: 290px;  
+	overflow-y: auto;
+	border-radius: 12px; 
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+	z-index: 999;
+  }
+  
+  #info_panel h3 {
+	margin-top: 0;
+	font-size: 16px;
+  }
+  
+  table {
+	width: 100%;
+	font-size: 13px;
+	border-collapse: collapse;
+  }
+  
+  td {
+	border: 1px solid #ccc;
+	padding: 6px 8px;
+	text-align: left;
+  }
+  
+
+
+/* 行政图层点击显示区域 */
+#district-info-box{
+	width: 100%;
+	background-color: #f8f9fa;
+	padding: 6px 8px;
+	border-top: 2px solid #ccc;
+	font-size: 15px;
+	color: #333;
+	line-height: 1.2;
+	text-align: center;
+}
+
+/* 地图下方卡片内容 */
+#attraction-info-box {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	width: 350px;
+	max-height: 60%;
+	overflow-y: auto;
+	background-color: #ffffff;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+	font-family: "Segoe UI", Tahoma, sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+	padding: 16px;
+	z-index: 999;
+	transition: all 0.3s ease-in-out;
+	border: 1px solid #ddd;
+  }
+  
+  #attraction-info-box h4 {
+	margin-top: 0;
+	font-size: 16px;
+	color: #333;
+	font-weight: bold;
+  }
+  
+  #attraction-info-box p {
+	margin: 6px 0;
+  }
+  
+  #attraction-info-box a {
+	color: #0078d4;
+	text-decoration: none;
+  }
+  
+  #attraction-info-box a:hover {
+	text-decoration: underline;
+  }
+  
+
+
+/* 图标 */
+.emoji-icon {
+	font-size: 16px;
+}
+
+
+
+
+
+
+/* 路线样式 */
+.info-box {
+	text-align: center;
+	padding: 0.5rem;
+	background-color: #ffdea177; 
+	border-radius: 0.5rem;
+	margin: 0.5rem auto;
+	font-size: 1rem;
+	color: #2e7d32;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	max-width: 1400px;
+  }
+  
+
+.trail-card {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	border-left: 4px solid #ffa500;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+	border-radius: 8px;
+	max-width: 1200px;
+	margin: 20px auto;
+  }
+  
+  .trail-image img {
+	width: 280px;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 6px;
+	box-shadow: 0 0 4px rgba(0,0,0,0.2);
+  }
+  
+  .trail-details {
+	flex: 1;
+  }
+  
+  .trail-details h4 {
+	margin-bottom: 10px;
+	font-size: 20px;
+	color: #333;
+  }
+  
+  .trail-details p {
+	margin: 4px 0;
+	font-size: 14px;
+	color: #444;
+  }
+  
+
+
+
+
+/* 推荐景点 */
+.recommendation-section {
+	margin-top: 1rem;
+	padding: 1rem;
+	background-color: white;
+	border-radius: 0.75rem; /* rounded-lg */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
+	max-width: 1400px; /* max-w-screen-xl */
+	margin-left: auto;
+	margin-right: auto;
+  }
+  
+  .recommendation-section h2 {
+	font-size: 1.5rem; /* text-2xl */
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+  }
+  
+  .carousel {
+	display: flex;
+	overflow-x: auto;
+	gap: 1rem;
+	padding-bottom: 0.5rem;
+  }
+  
+  .card {
+	min-width: 300px;
+	flex-shrink: 0;
+	background-color: #f3f4f6; /* bg-gray-100 */
+	border-radius: 0.75rem;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+	overflow: hidden;
+  }
+  
+  .card img {
+	height: 10rem; /* h-40 */
+	width: 100%;
+	object-fit: cover;
+	border-top-left-radius: 0.75rem;
+	border-top-right-radius: 0.75rem;
+  }
+  
+  .card-content {
+	padding: 1rem;
+  }
+  
+  .card-content h3 {
+	font-weight: 600;
+	font-size: 1.125rem; /* text-lg */
+	margin-bottom: 0.25rem;
+  }
+  
+  .card-content p {
+	font-size: 0.875rem;
+	color: #4b5563; /* text-gray-700 */
+  }
+  
+  .card-content a {
+	color: #3b82f6; /* text-blue-500 */
+	font-size: 0.875rem;
+	text-decoration: underline;
+	display: inline-block;
+	margin-top: 0.5rem;
+  }
+
+
+
+
+/* 线路筛选 */
+.difficulty-filter {
+	margin-top: 1rem;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+  }
+  
+  .difficulty-filter button {
+	background-color: #537655d6; /* 自然绿 */
+	color: white;
+	border: none;
+	padding: 0.5rem 1rem;
+	border-radius: 9999px; /* 超圆 */
+	font-size: 0.85rem;
+	font-weight: 600;
+	cursor: pointer;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+	transition: all 0.3s ease;
+	font-family: 'Quicksand', sans-serif;
+	width: 100px;
+  }
+  
+  .difficulty-filter button:hover {
+	background-color: #66bb6a;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+/* 图例 */
+  .map-legend {
+	position: absolute;
+	bottom: 70px;
+	left: 10px;
+	background: rgba(255, 255, 255, 0.616);
+	padding: 0.75rem 1rem;
+	border-radius: 8px;
+	font-size: 0.8rem;
+	box-shadow: 0 0 5px rgba(0,0,0,0.3);
+	line-height: 1.5;
+	z-index: 1000;
+	display: none;
+	width: 170px;
+  }
+  .map-legend h4 {
+	margin: 0 0 0.5rem;
+	font-size: 1rem;
+  }
+  .legend-color {
+	display: inline-block;
+	width: 16px;
+	height: 4px;
+	margin-right: 0.5rem;
+	vertical-align: middle;
+	border-radius: 3px;
+  }
+
+  

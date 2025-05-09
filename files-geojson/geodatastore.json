@@ -1,0 +1,227 @@
+{
+	"type" : "FeatureCollection",
+	"name" : "geodatastore",
+	"features" : [
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 114.17435, 22.29305 ]
+			},
+			"properties" : {
+				"Address" : "Waterfront Podium Garden, Tsim Sha Tsui East, Kowloon",
+				"Attraction" : "Avenue of Stars",
+				"Description" : "The Avenue of Stars, located on the Tsim Sha Tsui waterfront, is a salute to eminent Hong Kong film workers for their devoted contribution to local and world theatres. It is also one of the ideal vantage points for visitors to appreciate the iconic Victoria Harbour and the light and sound show of \"A Symphony of Lights\".",
+				"Latitude" : 22.29305,
+				"Longitude" : 114.17435,
+				"Telephone_number" : "(852) 5501 4431 ",
+				"Website" : "https://www.avenueofstars.com.hk/en",
+				"gml_id" : "fme-gen-b41ad06a-b856-460e-8dfb-7f11beddd818"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 114.16954, 22.29359 ]
+			},
+			"properties" : {
+				"Address" : "Star Ferry Pier, Kowloon Point, Tsim Sha Tsui, Kowloon",
+				"Attraction" : "Clock Tower",
+				"Description" : "The Clock Tower, adjacent to the Star Ferry Pier at Tsim Sha Tsui, is the remnants of the former Kowloon¡VCanton Railway terminus. It is a declared monument constructed in 1915. The bell, which was relocated since 1975, was returned to the Clock Tower in 2010, further enhancing the historical significance of the Clock Tower.",
+				"Latitude" : 22.29359,
+				"Longitude" : 114.16954,
+				"Telephone_number" : "-",
+				"Website" : "http://www.discoverhongkong.com/eng/see-do/culture-heritage/historical-sites/colonial/clock-tower.jsp",
+				"gml_id" : "fme-gen-14721c1e-c73f-4c6d-b9e1-d49a6461c3f8"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 114.17335, 22.28404 ]
+			},
+			"properties" : {
+				"Address" : "1 Expo Drive, Wan Chai, Hong Kong Island",
+				"Attraction" : "Golden Bauhinia Square (and Hong Kong Convention and Exhibition Centre)",
+				"Description" : "Golden Bauhinia Square outside the Hong Kong Convention and Exhibition Centre on the Wan Chai waterfront marks the unification of Hong Kong with the motherland. The \"Forever Blooming Bauhinia\" Sculpture (Golden Bauhinia) at the Square is a gift from the Central People's Government. There is also the flag-raising ceremony held every morning.",
+				"Latitude" : 22.28404,
+				"Longitude" : 114.17335,
+				"Telephone_number" : "-",
+				"Website" : "http://www.discoverhongkong.com/eng/see-do/highlight-attractions/harbour-view/golden-bauhinia-square.jsp",
+				"gml_id" : "fme-gen-63df8cd8-90d3-4bc8-b6cf-19ad14393564"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 114.04444, 22.31311 ]
+			},
+			"properties" : {
+				"Address" : "Hong Kong Disneyland Resort, Lantau Island",
+				"Attraction" : "Hong Kong Disneyland Resort",
+				"Description" : "Hong Kong Disneyland Resort is a world-class family-friendly international theme park located on Lantau Island. The Resort comprises a theme park and three themed resort hotels, offering dining, shopping and entertainment experiences. Visitors will be immersed in a world full of fantasy, imagination and magic. You may also enjoy a relaxing moment at the Inspiration Lake Recreation Centre in the vicinity of the Resort.",
+				"Latitude" : 22.31311,
+				"Longitude" : 114.04444,
+				"Telephone_number" : "(852) 3550 3388 ",
+				"Website" : "https://www.hongkongdisneyland.com/?located=true",
+				"gml_id" : "fme-gen-475ed431-d455-4e36-b51c-c26dd4d8d7cd"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 114.160147, 22.328516 ]
+			},
+			"properties" : {
+				"Address" : "Sham Shui Po, Kowloon",
+				"Attraction" : "Hong Kong Neighbourhoods - Sham Shui Po",
+				"Description" : "A historical community in Hong Kong with a down-to-earth charisma, Sham Shui Po is home to multiple historic sites, characteristic architecture, religious buildings, local diners, hawker stalls, shopping malls and bazaars. In this Sham Shui Po promotion campaign, diversified travelling experiences of the district are re-integrated under the theme, \"Every Bit Local\", to introduce the local hotspots in the district.",
+				"Latitude" : 22.32851568,
+				"Longitude" : 114.1601471,
+				"Telephone_number" : "-",
+				"Website" : "http://www.discoverhongkong.com/eng/see-do/neighbourhoods/sham-shui-po.jsp",
+				"gml_id" : "fme-gen-1a32c390-f82f-445a-87b0-ae49cdb492f0"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 114.17082, 22.31812 ]
+			},
+			"properties" : {
+				"Address" : "Tung Choi Street, Mong Kok, Kowloon",
+				"Attraction" : "Ladies' Market",
+				"Description" : "The Ladies' Market is widely known for bargain-priced clothes and accessories for all ages. You can also find other merchandise including Chinese style souvenirs, toys, watches, etc. and enjoy the local foods in one of the most popular outdoor markets in Hong Kong.",
+				"Latitude" : 22.31812,
+				"Longitude" : 114.17082,
+				"Telephone_number" : "-",
+				"Website" : "http://www.discoverhongkong.com/eng/shop/where-to-shop/street-markets-and-shopping-streets/ladies-market.jsp",
+				"gml_id" : "fme-gen-8d317cdd-13e5-4289-ab81-dc728694c8fe"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 114.15565, 22.28098 ]
+			},
+			"properties" : {
+				"Address" : "Lan Kwai Fong, Central, Hong Kong Island",
+				"Attraction" : "Lan Kwai Fong",
+				"Description" : "Lan Kwai Fong is a world-renowned entertainment area in Central best known for its variety of dining, drinking and clubbing offerings. It has the ambience of party atmosphere, which is often enhanced by the street carnivals, in particular during major festivals such as New Year, Halloween and Christmas.",
+				"Latitude" : 22.28098,
+				"Longitude" : 114.15565,
+				"Telephone_number" : "-",
+				"Website" : "https://www.lankwaifong.com/",
+				"gml_id" : "fme-gen-2e0c56b0-cb24-4a2c-92d9-9743d131613a"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 114.1746, 22.24707 ]
+			},
+			"properties" : {
+				"Address" : "Wong Chuk Hang, Hong Kong Island",
+				"Attraction" : "Ocean Park Hong Kong",
+				"Description" : "Ocean Park, with an area of over 915,000 square metres, is an educational theme park featuring animals attractions, thrill rides and shows. The cable car and the Ocean Express are two main transport linking two major attractions areas, the Waterfront and the Summit. The park is committed to animal conservation while births of rare shark species, sea lions, endangered birds and butterflies have been recorded. Ocean Park also offers restaurants designed as the classic / famous Hong Kong-style, themed panda caf? or aquarium setting.",
+				"Latitude" : 22.24707,
+				"Longitude" : 114.1746,
+				"Telephone_number" : "(852) 3923 2323",
+				"Website" : "https://www.oceanpark.com.hk/en",
+				"gml_id" : "fme-gen-a6b2b667-e9b9-47cf-9a9f-8d9c0025bb6b"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 114.158659, 22.279934 ]
+			},
+			"properties" : {
+				"Address" : "Central, Hong Kong Island",
+				"Attraction" : "Old Town Central",
+				"Description" : "Old Town Central repackages the diverse tourism appeal of Central, including a number of thematic walking routes to introduce heritage buildings and landmarks, arts and culture, lifestyle as well as dining and entertainment offerings in the district. Together with the Tai Kwun (or the former Central Police Station Compound), the Central and Western District has been transformed into a community filled with an \"art-across-time\" ambience.",
+				"Latitude" : 22.27993401,
+				"Longitude" : 114.1586592,
+				"Telephone_number" : "-",
+				"Website" : "http://www.discoverhongkong.com/eng/see-do/neighbourhoods/old-town-central.jsp",
+				"gml_id" : "fme-gen-25716f8c-07cb-429c-a3eb-dddb682f4edc"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 114.17013, 22.30716 ]
+			},
+			"properties" : {
+				"Address" : "Temple Street, Yau Ma Tei, Kowloon",
+				"Attraction" : "Temple Street Night Market",
+				"Description" : "The Temple Street Night Market is a bustling street bazaar in Hong Kong famous for its open-air Cantonese opera performances, fortune telling stalls and ¡§dai pai dongs¡¨ (open-air food stalls). There are also a wide variety of affordable merchandise like clothes, watches, electronics, accessories, antiques, etc.",
+				"Latitude" : 22.30716,
+				"Longitude" : 114.17013,
+				"Telephone_number" : "-",
+				"Website" : "http://www.discoverhongkong.com/eng/shop/where-to-shop/street-markets-and-shopping-streets/temple-street-night-market.jsp",
+				"gml_id" : "fme-gen-9e96bd6b-c9e4-4722-8dbc-a19b9e6c24fc"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 114.14989, 22.27126 ]
+			},
+			"properties" : {
+				"Address" : "The Peak, Hong Kong",
+				"Attraction" : "The Peak",
+				"Description" : "The Peak is the highest point on Hong Kong Island. The historic Peak Tram provides visitors a unique experience to arrive at The Peak. Apart from the spectacular cityscape, The Peak Tower, one of the architectural icons in Hong Kong, also offers shopping, dining and entertainment for all. Visitors can take a leisure walk around The Peak or try hiking along the walking trails to explore the natural environment of Hong Kong.",
+				"Latitude" : 22.27126,
+				"Longitude" : 114.14989,
+				"Telephone_number" : "(852) 2522 0922 (The Peak Tram) or (852) 2849 0668 (The Peak Tower)",
+				"Website" : "https://www.thepeak.com.hk/en",
+				"gml_id" : "fme-gen-33d1f35a-eb24-4235-b900-b8a8abc35f43"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 114.17698, 22.29615 ]
+			},
+			"properties" : {
+				"Address" : "Tsim Sha Tsui, Kowloon",
+				"Attraction" : "Tsim Sha Tsui Promenade",
+				"Description" : "The Tsim Sha Tsui Promenade extends over 1,200m from the Tsim Sha Tsui Public Pier along the Victoria Harbour coastal line to Tsim Sha Tsui East. By strolling along the promenade, visitors will see the magnificent view of Hong Kong Island's cityscape and skyline, as well as the Hong Kong Cultural Centre and the Hong Kong Space Museum.",
+				"Latitude" : 22.29615,
+				"Longitude" : 114.17698,
+				"Telephone_number" : "-",
+				"Website" : "http://www.discoverhongkong.com/eng/see-do/highlight-attractions/harbour-view/tsim-sha-tsui-promenade.jsp",
+				"gml_id" : "fme-gen-320c99d8-0605-4902-9a60-6ee08a361792"
+			}
+		},
+		{
+			"type" : "Feature",
+			"geometry" : {
+				"type" : "Point",
+				"coordinates" : [ 114.30095, 22.37749 ]
+			},
+			"properties" : {
+				"Address" : "Sai Kung, New Territories ",
+				"Attraction" : "Yim Tin Tsai",
+				"Description" : "Yim Tin Tsai (YTT) is a unique island where Hakka culture blends with Catholicism and blessed with rich ecology. The revitalised Chapel and saltpans are recognised with UNESCO Awards for Cultural Heritage Conservation. YTT Arts Festival turns YTT into an open museum, bringing to visitors new travel experiences integrating arts, religion, culture, heritage and green elements.",
+				"Latitude" : 22.37749,
+				"Longitude" : 114.30095,
+				"Telephone_number" : "-",
+				"Website" : "https://www.yimtintsaiartsfestival.hk/ytt-history.php?lang=en",
+				"gml_id" : "fme-gen-9646da2f-09c6-47d8-9370-8b6312dbfafe"
+			}
+		}
+	]
+}
